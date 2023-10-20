@@ -22,12 +22,14 @@ int main(void){
     Ellipse toRender(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, MAX_MID, MAX_SIDE);
     // toRender.renderItSelf(renderer);
 
+    Ball line(SCREEN_WIDTH / 2 + 1 , SCREEN_HEIGHT / 2 + 1, 0.5, -0.5);
+
     //star
     // Ball line(SCREEN_WIDTH / 2 - (MAX_MID/2 - 1) , SCREEN_HEIGHT / 2 +  (MAX_MID/2 - 1), -4.5, 1.6);
     //square
     // Ball line(SCREEN_WIDTH / 2 - (MAX_MID/2 - 1) , SCREEN_HEIGHT / 2 +  (MAX_MID/2 - 1), 1, 1);
     //pentagramme
-    Ball line(SCREEN_WIDTH / 2 - (MAX_MID / 2) , SCREEN_HEIGHT / 2 +  (MAX_MID / 2), -5, 2.5);
+    // Ball line(SCREEN_WIDTH / 2 - (MAX_MID / 2) , SCREEN_HEIGHT / 2 +  (MAX_MID / 2), -5, 2.5);
     //triangle
     // Ball line(SCREEN_WIDTH / 2 - (MAX_MID/2) , SCREEN_HEIGHT / 2 -  (MAX_MID/2), 1, 0);
 
