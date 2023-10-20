@@ -1,5 +1,6 @@
 
 #include "../inc/Ball.hpp"
+#include "../inc/Circle.hpp"
 
 int main(void){
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
@@ -7,7 +8,7 @@ int main(void){
     if (TTF_Init() == -1)
         SDL_Error("Failed to init TTF:", NULL, NULL);
     
-    SDL_Window *window = SDL_CreateWindow("Ellipse", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    SDL_Window *window = SDL_CreateWindow("Bounce", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (!window)
         SDL_Error("Failed to create SDL window:", window, NULL);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -19,11 +20,11 @@ int main(void){
     bool quit = false;
     SDL_Event e;
 
-    Ellipse toRender(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, MAX_MID, MAX_SIDE);
+    Circle toRender(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, MAX_RADIUS);
     // toRender.renderItSelf(renderer);
 
-    Ball line(SCREEN_WIDTH / 2 + 1 , SCREEN_HEIGHT / 2 + 1, 0.5, -0.5);
-
+    //line
+    // Ball line(SCREEN_WIDTH / 2 + 1 , SCREEN_HEIGHT / 2 + 1, 0.5, -0.5);
     //star
     // Ball line(SCREEN_WIDTH / 2 - (MAX_MID/2 - 1) , SCREEN_HEIGHT / 2 +  (MAX_MID/2 - 1), -4.5, 1.6);
     //square
@@ -31,7 +32,7 @@ int main(void){
     //pentagramme
     // Ball line(SCREEN_WIDTH / 2 - (MAX_MID / 2) , SCREEN_HEIGHT / 2 +  (MAX_MID / 2), -5, 2.5);
     //triangle
-    // Ball line(SCREEN_WIDTH / 2 - (MAX_MID/2) , SCREEN_HEIGHT / 2 -  (MAX_MID/2), 1, 0);
+    Ball line(SCREEN_WIDTH / 2 - (MAX_RADIUS/2) , SCREEN_HEIGHT / 2 -  (MAX_RADIUS/2), 1, 0);
 
     // Ball line(SCREEN_WIDTH / 2 - MAX_MID / 2 , SCREEN_HEIGHT / 2 +  MAX_MID / 2, -5, 2.5);
 

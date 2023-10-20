@@ -2,7 +2,7 @@
 # define BALL_HPP
 
 # include "header.hpp"
-# include "Ellipse.hpp"
+# include "Circle.hpp"
 # include <random>
 # include <cmath>
 
@@ -25,7 +25,7 @@ class Ball
 		Ball& operator=(const Ball &ball);
 
         void    renderItSelf(SDL_Renderer *renderer) const;
-        void    movement(const Ellipse& border);
+        void    movement(const Circle& border);
 
     private:
         point   _coo;

@@ -81,8 +81,8 @@ void    Ball::handleBounce(point circle, float radius) {
     
 }
 
-void    Ball::movement(const Ellipse& border){
-    handleBounce(border.getCoo(), border.getMidRadius());
+void    Ball::movement(const Circle& border){
+    handleBounce(border.getCoo(), border.getRadius());
 
     this->_coo.x = this->_coo.x + this->_direction.x * FRAME;
     this->_coo.y = this->_coo.y + this->_direction.y * FRAME;
